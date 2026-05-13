@@ -1,4 +1,4 @@
-# NOFO.bio
+# NOFO
 
 **NOFO** = Notice of Funding Opportunity. The federal term NIH, NSF, ARPA-H, and BARDA use for a published funding announcement.
 
@@ -6,7 +6,7 @@ Funding for healthtech founders and biomedical PIs — grants, SBIRs, fellowship
 
 ## What it is
 
-A single-file static HTML page — no build step, no backend, no dependencies. Open `index.html` in a browser, or visit the live site at [nofo.bio](https://nofo.bio).
+A single-file static HTML page — no build step, no backend, no dependencies. Open `index.html` in a browser, or visit the live site at [nofo.info](https://nofo.info).
 
 Each entry tags the opportunity type, the domain, and the region. Specific NOFOs/RFAs with hard deadlines are flagged separately from standing programs. Entries with no region tag default to `us` at render time.
 
