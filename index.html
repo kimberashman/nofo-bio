@@ -1,0 +1,1765 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NOFO.bio — funding for healthtech founders and biomedical PIs</title>
+<meta name="description" content="Curated grants, SBIRs, fellowships, accelerators, prizes, and credit programs for medical, healthcare, digital health, and AI. US, UK, EU. Verified deadlines." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nofo.bio/" />
+<meta property="og:title" content="NOFO.bio — funding for healthtech founders and biomedical PIs" />
+<meta property="og:description" content="Curated grants, SBIRs, fellowships, accelerators, prizes, and credit programs. Medical, healthcare, digital health, AI. US, UK, EU." />
+<meta property="og:image" content="https://nofo.bio/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230969da'/><text x='50%25' y='54%25' font-family='-apple-system,system-ui,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle' dominant-baseline='middle'>$</text></svg>" />
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --accent-2: #7ee787;
+    --warn: #f0883e;
+    --danger: #ff7b72;
+    --tag-bg: #21303f;
+    --tag-text: #79c0ff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f8fa;
+      --panel: #ffffff;
+      --panel-2: #f0f3f6;
+      --border: #d0d7de;
+      --text: #1f2328;
+      --muted: #59636e;
+      --accent: #0969da;
+      --accent-2: #1a7f37;
+      --warn: #bc4c00;
+      --danger: #cf222e;
+      --tag-bg: #ddf4ff;
+      --tag-text: #0969da;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+  header { padding: 28px 24px 16px; border-bottom: 1px solid var(--border); background: var(--panel); }
+  header h1 { margin: 0 0 6px; font-size: 22px; }
+  header p { margin: 0; color: var(--muted); font-size: 14px; }
+  header .header-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+  header .acronym { margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); }
+  header p.updated { margin-top: 10px; font-size: 12px; }
+  header p.updated span { color: var(--accent-2); font-weight: 600; }
+  .about-btn { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 8px; font-size: 13px; cursor: pointer; }
+  .about-btn:hover { border-color: var(--accent); color: var(--accent); }
+  dialog.about-modal { max-width: 560px; width: calc(100% - 40px); border: 1px solid var(--border); border-radius: 12px; background: var(--panel); color: var(--text); padding: 24px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+  dialog.about-modal::backdrop { background: rgba(0,0,0,.6); }
+  dialog.about-modal h2 { margin: 0 0 12px; font-size: 18px; }
+  dialog.about-modal h3 { margin: 16px 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); }
+  dialog.about-modal p, dialog.about-modal li { font-size: 14px; line-height: 1.55; }
+  dialog.about-modal ul { margin: 0; padding-left: 20px; }
+  dialog.about-modal .close { margin-top: 18px; background: var(--accent); color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; }
+  main { max-width: 1200px; margin: 0 auto; padding: 20px 24px 80px; }
+  .controls { display: grid; grid-template-columns: 1fr auto auto auto auto; gap: 10px; margin: 18px 0 8px; align-items: center; }
+  .card.past { opacity: 0.5; filter: grayscale(0.4); }
+  .card.past:hover { opacity: 0.85; filter: none; }
+  @media (max-width: 720px) { .controls { grid-template-columns: 1fr; } }
+  .badge { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 4px; letter-spacing: .3px; text-transform: uppercase; }
+  .badge.call { background: #5a2d2d; color: #ffb4a8; }
+  .badge.program { background: #2d3a5a; color: #a8c4ff; }
+  @media (prefers-color-scheme: light) {
+    .badge.call { background: #ffe2dc; color: #99221a; }
+    .badge.program { background: #e0eaff; color: #1a3899; }
+  }
+  .card-head { display: flex; gap: 8px; align-items: flex-start; justify-content: space-between; }
+  input[type="search"], select {
+    background: var(--panel); color: var(--text); border: 1px solid var(--border);
+    padding: 9px 12px; border-radius: 8px; font-size: 14px; outline: none;
+  }
+  input[type="search"]:focus, select:focus { border-color: var(--accent); }
+  input[type="search"].active-filter, select.active-filter { border-color: var(--accent); background: var(--tag-bg); color: var(--tag-text); font-weight: 600; }
+  .summary { display: flex; align-items: center; gap: 12px; }
+  .clear-filters { background: transparent; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; }
+  .clear-filters:hover { background: var(--accent); color: white; }
+  .tagbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 18px; }
+  .tagbar button {
+    background: var(--panel); color: var(--muted); border: 1px solid var(--border);
+    padding: 5px 10px; border-radius: 999px; font-size: 12px; cursor: pointer;
+    transition: all .12s;
+  }
+  .tagbar button:hover { border-color: var(--accent); color: var(--accent); }
+  .tagbar button.active {
+    background: var(--accent); color: white; border-color: var(--accent);
+    font-weight: 600; box-shadow: 0 0 0 2px var(--tag-bg);
+  }
+  .summary { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 16px; display: flex; flex-direction: column; gap: 10px;
+    transition: border-color .15s, transform .15s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card h3 { margin: 0; font-size: 15px; line-height: 1.35; }
+  .card .funder { color: var(--muted); font-size: 12px; }
+  .card .desc { font-size: 13px; color: var(--text); }
+  .card .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 12px; }
+  .pill { background: var(--panel-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px; color: var(--muted); }
+  .tag { background: var(--tag-bg); color: var(--tag-text); border-radius: 999px; padding: 2px 8px; font-size: 11px; }
+  .deadline { font-weight: 600; }
+  .deadline.soon { color: var(--warn); }
+  .deadline.urgent { color: var(--danger); }
+  .deadline.rolling { color: var(--accent-2); }
+  .card a.cta { color: var(--accent); text-decoration: none; font-size: 13px; margin-top: auto; }
+  .card a.cta:hover { text-decoration: underline; }
+  .empty { text-align: center; color: var(--muted); padding: 40px 0; }
+  footer { color: var(--muted); font-size: 12px; padding: 20px 24px; border-top: 1px solid var(--border); margin-top: 30px; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-row">
+    <div>
+      <h1>NOFO.bio</h1>
+      <p class="acronym">Notice of Funding Opportunity</p>
+    </div>
+    <button id="aboutBtn" class="about-btn" aria-haspopup="dialog">About</button>
+  </div>
+  <p>Funding for healthtech founders and biomedical PIs — grants, SBIRs, fellowships, accelerators, prizes, credit programs. Medical, healthcare, digital health, AI.</p>
+  <p class="updated">Last updated: <span id="lastUpdated"></span></p>
+</header>
+<main>
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search title, funder, or description…" />
+    <select id="statusFilter">
+      <option value="active">Active only</option>
+      <option value="all">Show passed too</option>
+      <option value="passed">Passed only</option>
+    </select>
+    <select id="kindFilter">
+      <option value="all">All types</option>
+      <option value="call">Specific calls only</option>
+      <option value="program">Standing programs only</option>
+    </select>
+    <select id="deadlineFilter">
+      <option value="all">All deadlines</option>
+      <option value="next30">Next 30 days</option>
+      <option value="next90">Next 90 days</option>
+      <option value="next180">Next 6 months</option>
+      <option value="rolling">Rolling / always open</option>
+    </select>
+    <select id="sort">
+      <option value="deadline">Sort: Soonest deadline</option>
+      <option value="award">Sort: Largest award</option>
+      <option value="title">Sort: Title (A–Z)</option>
+    </select>
+  </div>
+  <div class="tagbar" id="tagbar"></div>
+  <div class="summary">
+    <span id="summary"></span>
+    <button id="clearFilters" class="clear-filters" hidden>Clear filters</button>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" style="display:none">No opportunities match your filters.</div>
+</main>
+<footer>
+  Verify eligibility, deadlines, and terms with the funder before applying.<br />
+  Missing or out-of-date opportunity? Email <a href="mailto:hello@nofo.bio">hello@nofo.bio</a> or <a href="https://github.com/kimberashman/nofo-bio/issues" id="repoLink">open an issue</a>. <a href="#" id="aboutLinkFooter">About NOFO.bio</a>.
+</footer>
+
+<dialog id="aboutModal" class="about-modal">
+  <h2>About NOFO.bio</h2>
+  <p><strong>NOFO</strong> = <em>Notice of Funding Opportunity</em>. The federal term NIH, NSF, ARPA-H, and BARDA use. NOFO.bio is a curated list of those, plus related programs — SBIRs, fellowships, accelerators, prizes, credit programs — for healthtech founders and biomedical PIs.</p>
+
+  <h3>How this list is maintained</h3>
+  <ul>
+    <li>AI-assisted research, reviewed by a human before each entry lands.</li>
+    <li>Every entry links to the funder's source page. That's the authoritative record — verify there before applying.</li>
+    <li><em>Last updated</em> in the header bumps after every verification pass. That's the freshness signal.</li>
+  </ul>
+
+  <h3>In scope</h3>
+  <ul>
+    <li>Medical, healthcare, digital health, AI in health.</li>
+    <li>US, UK, and EU primary funders. Selected Canada, Australia, Japan, and Israel programs. Global accelerators.</li>
+    <li>Specific calls with hard deadlines, and standing programs — rolling, annual, residencies.</li>
+  </ul>
+
+  <h3>Out of scope</h3>
+  <ul>
+    <li>Foundation grants for nonprofits — Instrumentl and Candid cover that better.</li>
+    <li>Anything I can't verify against a funder's source page.</li>
+  </ul>
+
+  <button class="close" onclick="document.getElementById('aboutModal').close()">Close</button>
+</dialog>
+
+<script>
+// Each opportunity:
+// { title, funder, url, description, tags: [...], award: <USD number or null>,
+//   deadline: 'YYYY-MM-DD' | 'rolling' | 'annual', deadlineNote?: string }
+//
+// Standard NIH submission cycle dates are well-published and stable
+// (https://grants.nih.gov/grants/how-to-apply-application-guide/due-dates-and-submission-policies/due-dates.htm).
+// For programs without fixed dates I use 'rolling' or 'annual' with a note.
+const OPPORTUNITIES = [
+  // ---------- NIH standard cycle (next upcoming dates from 2026-05-05) ----------
+  {
+    title: "NIH R01 — Research Project Grant (new, Cycle II)",
+    funder: "NIH",
+    url: "https://grants.nih.gov/grants/funding/r01.htm",
+    description: "Flagship NIH mechanism for an independent, hypothesis-driven research project. Typical 3–5 year duration.",
+    tags: ["medical", "research"],
+    award: 500000,
+    kind: "call",
+    deadline: "2026-06-05",
+    deadlineNote: "Standard new R01 deadline (Cycle II)."
+  },
+  {
+    title: "NIH R21 — Exploratory/Developmental Research (new, Cycle II)",
+    funder: "NIH",
+    url: "https://grants.nih.gov/grants/funding/r21.htm",
+    description: "Two-year, higher-risk exploratory projects. Up to ~$275K direct over two years.",
+    tags: ["medical", "research"],
+    award: 275000,
+    kind: "call",
+    deadline: "2026-06-16",
+    deadlineNote: "Standard new R21 deadline (Cycle II)."
+  },
+  {
+    title: "NIH R03 — Small Research Grant (new, Cycle II)",
+    funder: "NIH",
+    url: "https://grants.nih.gov/grants/funding/r03.htm",
+    description: "Small, short-term projects (pilot/feasibility, secondary analysis, methods development).",
+    tags: ["medical", "research"],
+    award: 100000,
+    kind: "call",
+    deadline: "2026-06-16",
+    deadlineNote: "Standard new R03 deadline (Cycle II)."
+  },
+  {
+    title: "NIH K-series Career Development Award (new, Cycle II)",
+    funder: "NIH",
+    url: "https://researchtraining.nih.gov/programs/career-development",
+    description: "Mentored career development for early-career investigators (K01, K08, K23, K99/R00, etc.).",
+    tags: ["medical", "research", "career"],
+    award: null,
+    kind: "call",
+    deadline: "2026-06-12",
+    deadlineNote: "Standard new K-series deadline (Cycle II)."
+  },
+  {
+    title: "NIH SBIR/STTR Program",
+    funder: "NIH / HHS",
+    url: "https://seed.nih.gov/small-business-funding/find-funding/sbir-sttr-funding-opportunities",
+    description: "Non-dilutive funding for small businesses developing biomedical/health tech. Phase I up to ~$314K, Phase II up to ~$2.1M. Includes Direct-to-Phase II for companies with prior feasibility data.",
+    tags: ["medical", "digital health", "ai", "startup"],
+    award: 2095000,
+    deadline: "rolling",
+    deadlineNote: "Program was reauthorized April 13, 2026 after a lapse — no active NOFOs as of May 2026. Next standard receipt date is September 5, 2026; new NOFOs will be forecasted on Grants.gov before opening. Watch SEED for the FY26 Omnibus."
+  },
+
+  // ========== CURRENTLY OPEN SPECIFIC CALLS (verified May 2026) ==========
+  {
+    title: "PAR-25-154 — NIH HEAL: Early-Stage Discovery of New Pain Targets (R03)",
+    funder: "NIH HEAL Initiative",
+    url: "https://grants.nih.gov/grants/guide/pa-files/PAR-25-154.html",
+    description: "R03 grants for preclinical research identifying novel pain targets within the understudied druggable proteome. Part of the HEAL Initiative's drug-discovery portfolio.",
+    tags: ["medical", "research"],
+    award: 100000,
+    kind: "call",
+    deadline: "2026-07-16",
+    deadlineNote: "Application due July 16, 2026."
+  },
+  {
+    title: "RFA-NS-25-023 — NIH HEAL: Studies to Enable Analgesic Discovery (R61/R33)",
+    funder: "NIH HEAL Initiative / NINDS",
+    url: "https://grants.nih.gov/grants/guide/rfa-files/RFA-NS-25-023.html",
+    description: "Phased R61/R33 mechanism for preclinical analgesic discovery — milestone-driven progression from early target validation through lead candidate development.",
+    tags: ["medical", "research"],
+    award: null,
+    kind: "call",
+    deadline: "2027-01-15",
+    deadlineNote: "Application due January 15, 2027."
+  },
+  {
+    title: "PAR-25-450 — NCATS Clinical Trial Readiness for Rare Diseases (R21)",
+    funder: "NIH / National Center for Advancing Translational Sciences",
+    url: "https://grants.nih.gov/grants/guide/pa-files/PAR-25-450.html",
+    description: "R21 grants to advance clinical trial readiness for rare diseases, disorders, and syndromes — natural history studies, biomarker development, outcome measure validation, and trial design tools. PAR open through Jul 20, 2028.",
+    tags: ["medical", "research"],
+    award: 275000,
+    kind: "call",
+    deadline: "2026-06-16",
+    deadlineNote: "Standard NIH R21 receipt dates (Feb 16 / Jun 16 / Oct 16). Clinical trials not allowed under this mechanism."
+  },
+  {
+    title: "PAR-25-157 — NCATS ASCETTS (R21)",
+    funder: "NIH / National Center for Advancing Translational Sciences",
+    url: "https://grants.nih.gov/grants/guide/pa-files/PAR-25-157.html",
+    description: "Awards Supporting Cutting-Edge Technologies for Translational Science. R21 mechanism for development of novel translational tools, including informatics, AI, and digital methods.",
+    tags: ["medical", "digital health", "ai", "research"],
+    award: 275000,
+    kind: "call",
+    deadline: "2026-06-18",
+    deadlineNote: "Application due June 18, 2026 (clinical trials not allowed)."
+  },
+  {
+    title: "PAR-25-283 — NIMH Innovative Mental Health Services Research (R01)",
+    funder: "NIH / National Institute of Mental Health",
+    url: "https://grants.nih.gov/grants/guide/pa-files/PAR-25-283.html",
+    description: "R01s for innovative mental-health services research, including digital interventions and AI/ML-driven approaches to access, quality, and outcomes.",
+    tags: ["healthcare", "digital health", "ai", "research"],
+    award: 500000,
+    kind: "call",
+    deadline: "2026-06-05",
+    deadlineNote: "Uses standard NIH receipt dates (Feb 5 / Jun 5 / Oct 5). Clinical trials not allowed."
+  },
+  {
+    title: "Wellcome — Infectious Disease Clinical Trial Development Award",
+    funder: "Wellcome Trust",
+    url: "https://wellcome.org/grant-funding/schemes",
+    description: "Up to £200K over 24 months for transdisciplinary teams led from Africa, South Asia, or South-East Asia to develop a future proposal for a late-stage clinical trial that optimises current infectious-disease interventions in LMICs.",
+    tags: ["medical", "research", "global health", "uk"],
+    award: 200000,
+    kind: "call",
+    deadline: "2026-05-19",
+    deadlineNote: "Closes 19 May 2026. Mid-career or established researchers only. Lead organisation must be based in an LMIC in Africa, South Asia, or South-East Asia (excluding mainland China). Co-applicants required."
+  },
+  {
+    title: "MIT Solve — 10th Anniversary Global Challenge",
+    funder: "MIT Solve",
+    url: "https://solve.mit.edu/challenges/10-for-10-challenge",
+    description: "10 exceptional solutions chosen for the next decade in climate adaptation, economic opportunity, healthcare resilience, and inclusive learning. ≥$100K unrestricted prize funding per Solver, plus MIT mentorship and pro-bono support. AI for Humanity Prize up to $150K for AI/ML-driven solutions.",
+    tags: ["prize", "healthcare", "digital health", "ai", "global health", "startup"],
+    award: 150000,
+    kind: "call",
+    deadline: "2026-05-21",
+    deadlineNote: "Closes May 21, 2026 at 12:00pm EDT. Finalists selected June 25; winners announced September 22, 2026."
+  },
+  {
+    title: "Wellcome — Infectious Disease Clinical Trial Award: Optimising Interventions for Impact",
+    funder: "Wellcome Trust",
+    url: "https://wellcome.org/grant-funding/schemes",
+    description: "£1M–£8M over 3–5 years for transdisciplinary teams led from Africa, South Asia, or South-East Asia to run clinical trials optimising licensed pharmaceutical interventions for infectious diseases, generating evidence to drive policy and practice change.",
+    tags: ["medical", "research", "global health", "uk"],
+    award: 8000000,
+    kind: "call",
+    deadline: "2026-06-02",
+    deadlineNote: "Closes 2 June 2026. Mid-career or established researchers only. Lead organisation must be based in an LMIC in Africa, South Asia, or South-East Asia (excluding mainland China). Co-applicants required."
+  },
+  {
+    title: "Techstars AI Health Baltimore — Spring 2026",
+    funder: "Techstars",
+    url: "https://www.techstars.com/accelerators/baltimore-ai-health",
+    description: "13-week AI-focused healthcare accelerator powered by Johns Hopkins, CareFirst BlueCross BlueShield, University of Maryland Medical System, UMD Baltimore, and MedStar Health. Standard Techstars $120K deal. Focus areas: care delivery, clinical operations, revenue cycle, patient engagement, population health.",
+    tags: ["accelerator", "healthcare", "digital health", "ai", "startup"],
+    award: 120000,
+    kind: "call",
+    deadline: "2026-06-10",
+    deadlineNote: "Applications close June 10, 2026. Program runs Sep 14 – Dec 10, 2026 in Baltimore."
+  },
+  {
+    title: "HRSA-27-001 — Maternal & Child Health Services",
+    funder: "HRSA / Maternal & Child Health Bureau",
+    url: "https://www.hrsa.gov/grants/find-funding",
+    description: "HRSA Maternal & Child Health Bureau funding to support state-level maternal and child health services. Broad eligibility and scope under Title V.",
+    tags: ["healthcare", "policy"],
+    award: null,
+    kind: "call",
+    deadline: "2026-07-13",
+    deadlineNote: "Application deadline July 13, 2026. Check Grants.gov for the full HRSA-27-001 NOFO and current eligibility."
+  },
+  {
+    title: "Wellcome — Mental Health Award: Physical Activity & Circadian Interventions for Young People",
+    funder: "Wellcome Trust",
+    url: "https://wellcome.org/grant-funding/schemes",
+    description: "£1M–£4M over 3–4 years for established researchers using physical activity and circadian-based interventions to reduce anxiety and depression in young people. 5–10 awards expected; highly competitive.",
+    tags: ["healthcare", "research", "uk"],
+    award: 4000000,
+    kind: "call",
+    deadline: "2026-07-14",
+    deadlineNote: "Closes 14 July 2026. Established researchers; open to lead organisations anywhere except mainland China. Co-applicants required."
+  },
+  {
+    title: "Wellcome Early-Career Awards — July 2026 round",
+    funder: "Wellcome Trust",
+    url: "https://wellcome.org/research-funding/schemes/wellcome-early-career-awards",
+    description: "Salary + up to £400K research expenses, usually over 5 years, for early-career researchers ready to develop their research identity through innovative projects in human life, health and wellbeing.",
+    tags: ["medical", "research", "career", "uk"],
+    award: 400000,
+    kind: "call",
+    deadline: "2026-07-21",
+    deadlineNote: "Deadline 21 July 2026. Three rounds per year. Lead organisation must be in UK, Republic of Ireland, or an LMIC (excluding India and mainland China). Co-applicants not accepted."
+  },
+  {
+    title: "Wellcome Accelerator Awards — 2026 round",
+    funder: "Wellcome Trust",
+    url: "https://wellcome.org/grant-funding/schemes",
+    description: "Up to £200K + salary over 2 years to support successful career transitions for researchers of Black, Bangladeshi, and Pakistani heritage based in the UK.",
+    tags: ["research", "career", "uk"],
+    award: 200000,
+    kind: "call",
+    deadline: "2026-08-25",
+    deadlineNote: "Closes 25 August 2026. Early-career or mid-career researchers. UK-based lead organisations only. Annual round through 2028."
+  },
+  {
+    title: "Wellcome Discovery Awards — September 2026 round",
+    funder: "Wellcome Trust",
+    url: "https://wellcome.org/research-funding/schemes/wellcome-discovery-awards",
+    description: "Long-term, flexible funding for established researchers and teams from any discipline pursuing bold, creative research in human life, health, and wellbeing. Average award £3.5M; awards above £5M subject to extra scrutiny.",
+    tags: ["medical", "research", "uk"],
+    award: 5000000,
+    kind: "call",
+    deadline: "2026-09-22",
+    deadlineNote: "Deadline 22 September 2026. Awards typically 7 years (3–8 yr range). Lead organisation in UK, Republic of Ireland, or an LMIC (excluding India and mainland China). Co-applicants accepted."
+  },
+  {
+    title: "PAR-25-228 — NHGRI Investigator Initiated Innovation in Computational Genomics and Data Science (R01)",
+    funder: "NIH / National Human Genome Research Institute",
+    url: "https://grants.nih.gov/grants/guide/pa-files/PAR-25-228.html",
+    description: "R01 for novel computational, statistical, and ML methods for genomics, including AI applications. PAR open through Sep 8, 2027.",
+    tags: ["medical", "research", "ai", "digital health"],
+    award: 500000,
+    kind: "call",
+    deadline: "2026-06-05",
+    deadlineNote: "Standard NIH R01 receipt dates (Feb 5 / Jun 5 / Oct 5). Clinical trials not allowed."
+  },
+  {
+    title: "PAR-25-229 — NHGRI Investigator Initiated Innovation in Computational Genomics and Data Science (R21)",
+    funder: "NIH / National Human Genome Research Institute",
+    url: "https://grants.nih.gov/grants/guide/pa-files/PAR-25-229.html",
+    description: "R21 companion to PAR-25-228 — exploratory/developmental projects in computational genomics, ML, and data science. PAR open through Sep 8, 2027.",
+    tags: ["medical", "research", "ai", "digital health"],
+    award: 275000,
+    kind: "call",
+    deadline: "2026-06-16",
+    deadlineNote: "Standard NIH R21 receipt dates (Feb 16 / Jun 16 / Oct 16). Clinical trials not allowed."
+  },
+  {
+    title: "PAR-25-235 — NLM Personal Health Informatics for Delivering Actionable Insights to Individuals (R01)",
+    funder: "NIH / National Library of Medicine",
+    url: "https://grants.nih.gov/grants/guide/pa-files/PAR-25-235.html",
+    description: "R01 for consumer-facing personal health informatics — actionable insights, behavior change, wearables, and patient-generated data. PAR open through Jan 8, 2027.",
+    tags: ["healthcare", "digital health", "ai", "research"],
+    award: 500000,
+    kind: "call",
+    deadline: "2026-06-05",
+    deadlineNote: "Standard NIH R01 receipt dates. Clinical trials optional."
+  },
+  {
+    title: "PAR-25-131 — NLM Computational Approaches to Curation at Scale for Biomedical Research Assets (R01)",
+    funder: "NIH / National Library of Medicine",
+    url: "https://grants.nih.gov/grants/guide/pa-files/PAR-25-131.html",
+    description: "R01 for AI/ML approaches to large-scale curation of biomedical data, literature, and research assets. PAR open through Apr 16, 2027.",
+    tags: ["healthcare", "ai", "research"],
+    award: 500000,
+    kind: "call",
+    deadline: "2026-06-05",
+    deadlineNote: "Standard NIH R01 receipt dates. Clinical trials not allowed."
+  },
+  {
+    title: "PAR-25-322 — Stephen I. Katz Early Stage Investigator R01",
+    funder: "NIH / Office of the Director",
+    url: "https://grants.nih.gov/grants/guide/pa-files/PAR-25-322.html",
+    description: "R01 for ESI applicants proposing research in a new direction — no preliminary data required. Applicant cannot have served as PI on a prior NIH R01-equivalent. PAR open through Aug 26, 2028.",
+    tags: ["medical", "research", "career"],
+    award: 500000,
+    kind: "call",
+    deadline: "2026-06-05",
+    deadlineNote: "Standard NIH R01 receipt dates. Clinical trials not allowed."
+  },
+  {
+    title: "RFA-OD-24-011 — NIH Research Software Engineer (RSE) Award (R50)",
+    funder: "NIH / Office of the Director",
+    url: "https://grants.nih.gov/grants/guide/rfa-files/RFA-OD-24-011.html",
+    description: "R50 award supporting research software engineers as career scientists at NIH-funded institutions. Recognizes the role of software engineering in modern biomedical research.",
+    tags: ["research", "career", "ai", "digital health"],
+    award: null,
+    kind: "call",
+    deadline: "2026-12-05",
+    deadlineNote: "RFA expires December 5, 2026. Verify exact application due dates on the RFA page."
+  },
+  {
+    title: "PAR-26-042 — NLM Clinical Informatics R01",
+    funder: "NIH / National Library of Medicine",
+    url: "https://simpler.grants.gov/opportunity/131fabad-5506-431b-b87a-e564f1d8dcc4",
+    description: "R01 grants for clinical informatics research — methods, tools, and applications that improve clinical care, including AI/ML approaches. Up to $250K direct costs/year; ~10 awards expected.",
+    tags: ["healthcare", "digital health", "ai", "research"],
+    award: 250000,
+    kind: "call",
+    deadline: "2026-06-05",
+    deadlineNote: "Standard NIH receipt dates (Feb 5 / Jun 5 / Oct 5) recurring through 2029. NOFO expires March 6, 2029."
+  },
+  {
+    title: "RFA-LM-26-004 — NLM Institutional Training Grants in Informatics, Data Science & AI",
+    funder: "NIH / National Library of Medicine",
+    url: "https://simpler.grants.gov/opportunity/1c1ad215-73b3-44cf-afef-a386915e2f7f",
+    description: "T15 institutional training grants for predoctoral and postdoctoral programs in biomedical informatics, data science, and AI. ~$500K–$775K per award; ~25 awards expected.",
+    tags: ["healthcare", "digital health", "ai", "research", "career"],
+    award: 775000,
+    kind: "call",
+    deadline: "2026-09-25",
+    deadlineNote: "Application due September 25, 2026; project start July 1, 2027."
+  },
+  {
+    title: "Intuitive Foundation — Clinical Research Grants for Robotic-Assisted Surgery (Round 2)",
+    funder: "Intuitive Foundation",
+    url: "https://www.intuitive-foundation.org/clinical-research-grants/",
+    description: "Up to $75K per project for 1 year of clinical research at non-profit institutions worldwide focused on robotic-assisted surgery — comparative outcomes, emerging procedures, patient-outcome studies. Funds salaries (statisticians, fellows, coordinators), equipment, supplies, travel.",
+    tags: ["medical", "research", "global"],
+    award: 75000,
+    kind: "call",
+    deadline: "2026-06-05",
+    deadlineNote: "Round 2 LOI due June 5, 2026. Invited full applications due September 7, 2026; awardees notified week of Nov 16, 2026. Round 1 (full app due April 11, 2026) has passed."
+  },
+  {
+    title: "Hill Prize in Commercialization, Innovation & Technology — 2027 cycle",
+    funder: "Lyda Hill Philanthropies / TAMEST",
+    url: "https://tamest.org/hill-prizes/",
+    description: "$500K non-dilutive prize for Texas-based entrepreneurs and companies in applied sciences, biotechnology, engineering, life sciences, and medicine. No equity taken; full IP retention.",
+    tags: ["prize", "medical", "startup"],
+    award: 500000,
+    kind: "call",
+    deadline: "2026-06-01",
+    deadlineNote: "Closes June 1, 2026, 6:00pm CT. Texas-based applicants only. Recipients announced January 2027; ceremony at TAMEST Annual Conference in Houston, Feb 1, 2027."
+  },
+  {
+    title: "Hill Prize in Medicine — 2027 cycle",
+    funder: "Lyda Hill Philanthropies / TAMEST",
+    url: "https://tamest.org/hill-prizes/",
+    description: "$500K non-dilutive prize for senior PIs at Texas-based academic institutions, medical centers, and nonprofit research institutes. Covers autoimmune disorders, cardiopulmonary, clinical pharmacology, GI, maternal/children's health, musculoskeletal, neuropsychiatric, oncology, pathology, and psychiatry.",
+    tags: ["prize", "medical", "research", "career"],
+    award: 500000,
+    kind: "call",
+    deadline: "2026-06-01",
+    deadlineNote: "Closes June 1, 2026, 6:00pm CT. Texas-based, academic/nonprofit only. Eligibility restricted to PIs 15+ years past their first independent faculty appointment (2011 or earlier)."
+  },
+  {
+    title: "Hill Prize in Biological Sciences — 2027 cycle",
+    funder: "Lyda Hill Philanthropies / TAMEST",
+    url: "https://tamest.org/hill-prizes/",
+    description: "$500K non-dilutive prize for senior PIs at Texas-based academic institutions and nonprofit research institutes. Covers animal biology, ecology and environmental science, entomology, infectious diseases and immunology, microbiology, and plant biology.",
+    tags: ["prize", "medical", "research", "career"],
+    award: 500000,
+    kind: "call",
+    deadline: "2026-06-01",
+    deadlineNote: "Closes June 1, 2026, 6:00pm CT. Texas-based, academic/nonprofit only. Eligibility restricted to PIs 15+ years past their first independent faculty appointment (2011 or earlier)."
+  },
+  {
+    title: "Innovate UK — Advancing Innovation in Drug & Alcohol Addiction Healthcare",
+    funder: "Innovate UK / UKRI",
+    url: "https://www.ukri.org/opportunity/advancing-innovation-in-drug-and-alcohol-addiction-healthcare/",
+    description: "Industry-led consortia grants for late-stage, high-impact projects (wearables, AI, VR, medicines, devices) addressing drug and alcohol addiction. Total programme £20M across two strands; this strand awards up to £10M per project.",
+    tags: ["healthcare", "digital health", "ai", "medical", "startup", "uk"],
+    award: 10000000,
+    kind: "call",
+    deadline: "2026-05-06",
+    deadlineNote: "Closes 6 May 2026. Projects start 1 December 2026, run 24–36 months. UK-based industry-led consortia only."
+  },
+  {
+    title: "Innovate UK — Contracts for Innovation: Drug & Alcohol Addiction Healthcare",
+    funder: "Innovate UK / UKRI",
+    url: "https://www.ukri.org/opportunity/contracts-for-innovation-in-drug-and-alcohol-addiction-healthcare/",
+    description: "Earlier-stage strand of the £20M addiction innovation programme. Up to £1.5M (inc. VAT) per project for promising pharma, MedTech, and digital interventions to demonstrate initial effectiveness and strengthen business planning.",
+    tags: ["healthcare", "digital health", "medical", "startup", "uk"],
+    award: 1500000,
+    kind: "call",
+    deadline: "2026-05-06",
+    deadlineNote: "Closes 6 May 2026. Procurement-style 'Contracts for Innovation' mechanism rather than grant."
+  },
+  {
+    title: "Horizon Europe — EU Mission: Cancer (2026 calls)",
+    funder: "European Commission / HaDEA",
+    url: "https://hadea.ec.europa.eu/news/2026-horizon-europe-calls-support-eu-mission-cancer-2026-02-12_en",
+    description: "2026 cancer-mission calls covering Virtual Human Twin models, microbiome for early prediction, pragmatic immunotherapy trials, earlier palliative care, mental health of young cancer survivors, and quality of life for older patients.",
+    tags: ["medical", "healthcare", "ai", "research", "eu"],
+    award: null,
+    kind: "call",
+    deadline: "2026-09-15",
+    deadlineNote: "2026 calls close 15 September 2026, 17:00 CET. 2027 calls close 21 September 2027."
+  },
+  {
+    title: "ARPA-H Delphi — Self-monitoring Health Ecosystems",
+    funder: "ARPA-H (Proactive Health Office)",
+    url: "https://arpa-h.gov/explore-funding/programs/delphi",
+    description: "Develop self-monitoring ecosystems that help individuals 'know thyself' — early-warning, personalized, sensor-driven health monitoring at home and in everyday life.",
+    tags: ["healthcare", "digital health", "ai", "startup", "research"],
+    award: null,
+    kind: "call",
+    deadline: "2026-05-13",
+    deadlineNote: "Full Proposal due May 13, 2026, 5:00pm ET. The required Solution Summary was due April 8, 2026 — applicants without a submitted summary cannot apply this round."
+  },
+  {
+    title: "ARPA-H TIGAR — Tissue Preservation Exploratory Topic",
+    funder: "ARPA-H (Health Science Futures Office)",
+    url: "https://arpa-h.gov/explore-funding/initiatives-and-sprints/tigar",
+    description: "Rapidly evaluate early-stage, high-risk technologies for preserving complex human tissues across temperature ranges, with longer storage and rapid functional restoration.",
+    tags: ["medical", "research", "startup"],
+    award: null,
+    kind: "call",
+    deadline: "2026-06-08",
+    deadlineNote: "Solution Video due June 8, 2026; full proposal due August 5, 2026 if invited."
+  },
+  {
+    title: "ARPA-H STOMP — Systematic Targeting Of MicroPlastics",
+    funder: "ARPA-H",
+    url: "https://arpa-h.gov/explore-funding/programs/stomp",
+    description: "$144M program seeking proposals in microplastics measurement and biological-mechanism research. Two technical areas; full-proposal stage open.",
+    tags: ["medical", "research"],
+    award: null,
+    kind: "call",
+    deadline: "2026-06-22",
+    deadlineNote: "Full Proposal due June 22, 2026, 5:00pm ET (Solution Summary stage closed earlier)."
+  },
+  {
+    title: "ARPA-H SBIR/STTR — FY26 Solicitation",
+    funder: "ARPA-H",
+    url: "https://arpa-h.gov/explore-funding/sbir",
+    description: "Up to $3.5M for small businesses developing transformative health technologies aligned with ARPA-H mission topics. Solution Summary first; full proposal upon invitation.",
+    tags: ["medical", "healthcare", "digital health", "ai", "startup"],
+    award: 3500000,
+    kind: "call",
+    deadline: "2026-07-10",
+    deadlineNote: "Solution Summary due July 10, 2026 (11:59pm ET). Tech presentation & cost proposal due Sep 9, 2026 if invited."
+  },
+  {
+    title: "EIC Accelerator — Step 2 Cut-off (July 2026)",
+    funder: "European Innovation Council",
+    url: "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+    description: "Up to €2.5M grant + €0.5–15M equity for deep-tech SMEs. 2026 has 6 cut-offs total — next ones: Jul 8, Sep 2, Nov 4. Step 1 short application can be submitted any time.",
+    tags: ["medical", "healthcare", "digital health", "ai", "startup", "eu"],
+    award: 17500000,
+    kind: "call",
+    deadline: "2026-07-08",
+    deadlineNote: "Step 2 full-proposal cut-off July 8, 2026. Must have passed Step 1 first."
+  },
+  {
+    title: "Wellcome Career Development Awards — July 2026 round",
+    funder: "Wellcome Trust",
+    url: "https://wellcome.org/research-funding/schemes/wellcome-career-development-awards",
+    description: "Up to 8 years of funding for mid-career researchers leading ambitious, innovative biomedical research programmes. Three rounds per year.",
+    tags: ["medical", "research", "career", "uk"],
+    award: null,
+    kind: "call",
+    deadline: "2026-07-28",
+    deadlineNote: "Application deadline July 28, 2026; interviews January 2027. Subsequent rounds in November 2026 and April 2027."
+  },
+  {
+    title: "Innovate UK — Biomedical Catalyst 2026",
+    funder: "Innovate UK / UKRI",
+    url: "https://iuk-business-connect.org.uk/programme/biomedical-catalyst/",
+    description: "Industry-led R&D grants for UK SMEs in life sciences, medical devices, diagnostics, and digital health (typically £1–4M).",
+    tags: ["medical", "digital health", "startup", "uk"],
+    award: 4000000,
+    kind: "call",
+    deadline: "2026-09-15",
+    deadlineNote: "Round closes 15 September 2026. Verify exact UK time on the Innovation Funding Service portal."
+  },
+
+  // ---------- ARPA-H / BARDA ----------
+  {
+    title: "ARPA-H Mission Office ISOs",
+    funder: "Advanced Research Projects Agency for Health",
+    url: "https://arpa-h.gov/explore-funding/open-funding-opportunities",
+    description: "Replaces the former Open BAA. Four Mission Office Innovative Solution Openings (Health Science Futures, Proactive Health, Resilient Systems, Scalable Solutions) seek revolutionary health-tech proposals that fall outside specific ARPA-H programs.",
+    tags: ["medical", "healthcare", "digital health", "ai", "startup", "research"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Solution Summaries accepted on a rolling basis. Full proposals only on invitation. Awards typically issued as Other Transactions (OTs)."
+  },
+  {
+    title: "BARDA DRIVe — EZ-BAA",
+    funder: "BARDA / HHS",
+    url: "https://drive.hhs.gov/ezbaa.html",
+    description: "Streamlined funding (typically up to $750K) for early-stage health security and pandemic-preparedness tech, including diagnostics and digital tools.",
+    tags: ["medical", "healthcare", "digital health", "startup"],
+    award: 750000,
+    deadline: "rolling",
+    deadlineNote: "EZ-BAA accepts proposals on a rolling basis under active topic areas."
+  },
+
+  // ---------- NSF ----------
+  {
+    title: "NSF SBIR/STTR Phase I",
+    funder: "National Science Foundation",
+    url: "https://seedfund.nsf.gov/",
+    description: "Up to $305K (Phase I) for deep-tech startups. Health, biotech, AI/ML, and digital health are eligible topics. Project Pitch required first.",
+    tags: ["medical", "digital health", "ai", "startup"],
+    award: 305000,
+    deadline: "rolling",
+    deadlineNote: "Project Pitches accepted continuously; full proposals invited after pitch acceptance."
+  },
+  {
+    title: "NSF Smart Health and Biomedical Research in the Era of AI and Advanced Data Science (SCH)",
+    funder: "NSF (with NIH)",
+    url: "https://www.nsf.gov/funding/opportunities/smart-health-biomedical-research-era-artificial",
+    description: "Joint NSF/NIH program for AI/data-science approaches to transformative health research.",
+    tags: ["medical", "healthcare", "digital health", "ai", "research"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Typically one annual deadline (often Nov). Check current solicitation."
+  },
+
+  // ---------- Foundations ----------
+  {
+    title: "Wellcome Leap — Active Programs",
+    funder: "Wellcome Leap",
+    url: "https://wellcomeleap.org/",
+    description: "Bold, breakthrough health programs with multi-million-dollar performer contracts. Recent and active programs include CARE (women's health/Alzheimer's risk via endocrinology), FORM (resilient microbiome), VISIBLE (women's cardiovascular health), Focused Antibiotics, and Q4Bio (quantum for biology).",
+    tags: ["medical", "digital health", "ai", "research"],
+    award: 5000000,
+    deadline: "rolling",
+    deadlineNote: "Each program runs its own call — check the programs page for open solicitations."
+  },
+  {
+    title: "Chan Zuckerberg Initiative — Science RFAs",
+    funder: "Chan Zuckerberg Initiative (CZI)",
+    url: "https://chanzuckerberg.com/science/science-funding/",
+    description: "Foundation funder of biomedical research RFAs in single-cell biology, AI/ML for biological discovery, imaging tools (napari), neurodegeneration, rare diseases, and the CZ Biohub investigator programs.",
+    tags: ["medical", "ai", "research"],
+    award: null,
+    deadline: "inactive",
+    deadlineNote: "No RFAs currently open as of May 2026. CZI posts new RFAs periodically — bookmark the funding page and check back."
+  },
+  {
+    title: "Gates Foundation — Grand Challenges",
+    funder: "Bill & Melinda Gates Foundation",
+    url: "https://www.grandchallenges.org/grant-opportunities",
+    description: "Global health and development challenge platform. Past rounds have featured AI for low-resource health systems, maternal/child health, infectious disease, and data-science capacity. New challenges launch periodically.",
+    tags: ["medical", "healthcare", "global health"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Currently only one open challenge: Estimating the Global Burden of Diarrheal Diseases. Check the page for new challenge launches."
+  },
+  {
+    title: "Robert Wood Johnson Foundation — Open Calls",
+    funder: "RWJF",
+    url: "https://www.rwjf.org/en/grants/active-funding-opportunities.html",
+    description: "Funding for research and projects advancing health equity in the U.S., including digital health and policy work.",
+    tags: ["healthcare", "digital health", "policy"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Calls cycle throughout the year — filter by topic on the page."
+  },
+  {
+    title: "Patient-Centered Outcomes Research Institute (PCORI)",
+    funder: "PCORI",
+    url: "https://www.pcori.org/funding-opportunities",
+    description: "Funds comparative clinical-effectiveness research, dissemination & implementation, and patient-engagement infrastructure. Three program streams: Research Awards (CER Broad Pragmatic, PLACER, Topically Focused, Engagement Science, Methods), D&I Implementation Awards, and Engagement in Research Awards.",
+    tags: ["healthcare", "research"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Research and D&I awards run 3 cycles/yr (PFA → LOI → Application). Engagement awards run Spring + Fall cycles. See the specific call entries below for the next deadlines."
+  },
+  {
+    title: "PCORI Engagement in Research Awards — Spring Cycle 2026",
+    funder: "PCORI",
+    url: "https://www.pcori.org/funding-opportunities",
+    description: "Capacity Building, Dissemination Initiative, Convening Support, and Building Capacity for Small Organizations to Engage in Patient-Centered CER. LOI was required (March 30, 2026) — full proposals due July 13, 2026.",
+    tags: ["healthcare", "research"],
+    award: null,
+    kind: "call",
+    deadline: "2026-07-13",
+    deadlineNote: "Proposals due July 13, 2026. LOI was due March 30, 2026 — applicants without a submitted LOI cannot apply this cycle."
+  },
+  {
+    title: "PCORI Research & D&I Awards — Cycle 2 2026",
+    funder: "PCORI",
+    url: "https://www.pcori.org/funding-opportunities",
+    description: "Cycle 2 of PCORI's flagship Research Awards (CER Broad Pragmatic, PLACER, Topically Focused, Engagement Science, Methods). D&I Implementation Awards do not run in Cycle 2.",
+    tags: ["healthcare", "research"],
+    award: null,
+    kind: "call",
+    deadline: "2026-09-01",
+    deadlineNote: "Applications due September 1, 2026. LOI was due April 28, 2026 — applicants without a submitted LOI cannot apply this cycle. Cycle 3 PFAs open Aug 4, 2026 (LOI Sept 8, App Jan 12, 2027)."
+  },
+  {
+    title: "Doris Duke Foundation — Clinical Scientist Development Award",
+    funder: "Doris Duke Foundation",
+    url: "https://www.ddcf.org/funding-areas/medical-research/clinical-scientist-development-award/",
+    description: "Three-year award supporting early-career physician-scientists pursuing clinical research. ~$540K over the award period.",
+    tags: ["medical", "research", "career"],
+    award: 540000,
+    deadline: "inactive",
+    deadlineNote: "Last confirmed competition cycle was 2023. No 2024–2026 cycle has been announced and the foundation's site has been inaccessible — verify status with DDCF directly before assuming applications will reopen."
+  },
+  {
+    title: "American Heart Association — Research Programs",
+    funder: "AHA",
+    url: "https://professional.heart.org/en/research-programs",
+    description: "Predoctoral, postdoctoral, career-development, and project awards in cardiovascular and cerebrovascular health.",
+    tags: ["medical", "research"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Most programs have one or two annual cycles."
+  },
+  {
+    title: "American Cancer Society — Research & Training Grants",
+    funder: "ACS",
+    url: "https://www.cancer.org/research/we-fund-cancer-research/apply-research-grant.html",
+    description: "Independent investigator (Mission Boost, Research Scholar), mentored (Postdoctoral Fellowships, Clinician Scientist Development), institutional, and Professor awards. Plus targeted RFAs (Biology to Prevention with CRUK, Cancer Health Research Centers, EDS Accelerator, Yosemite-ACS, Real-World Data Impact, LEAP).",
+    tags: ["medical", "research", "career", "ai"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Two main cycles per year: applications due June 1 and December 1. Some RFAs have their own off-cycle deadlines — check the site."
+  },
+  {
+    title: "ACS Spring Cycle — June 2026 (Mission Boost, Research Scholar, Postdoc Fellowship)",
+    funder: "American Cancer Society",
+    url: "https://www.cancer.org/research/we-fund-cancer-research/apply-research-grant.html",
+    description: "Spring cycle covers Mission Boost Grants (translation-focused, two-stage up to $545K Stage II), Research Scholar Grants (early-career PIs within 8 yrs of independent appointment, up to $215K/yr × 4 yrs), and Postdoctoral Fellowships (3-yr stipend). Cancer Health Research Centers and Biology to Prevention RFA also use this window.",
+    tags: ["medical", "research", "career"],
+    award: 860000,
+    kind: "call",
+    deadline: "2026-06-01",
+    deadlineNote: "Applications due June 1, 2026. Submit via ProposalCentral. Next cycle deadline is December 1, 2026."
+  },
+  {
+    title: "Helmsley Charitable Trust — Health Programs",
+    funder: "Leona M. and Harry B. Helmsley Charitable Trust",
+    url: "https://helmsleytrust.org/",
+    description: "Major US foundation funding Type 1 diabetes, Crohn's disease, rural healthcare (US), Israel healthcare & preparedness, sub-Saharan Africa health, and NYC regional health.",
+    tags: ["medical", "healthcare"],
+    award: null,
+    deadline: "inactive",
+    deadlineNote: "No open RFPs. Helmsley is invitation-only — funding is driven by program-officer relationships and proactive outreach by Helmsley, not by cold applications. Worth knowing who funds your space, but not directly applicable."
+  },
+  {
+    title: "Schmidt Sciences — AI in Science",
+    funder: "Schmidt Sciences",
+    url: "https://www.schmidtsciences.org/",
+    description: "Programs supporting AI applications across scientific domains, including biomedicine and health.",
+    tags: ["ai", "research"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Initiative-specific calls — check current opportunities."
+  },
+
+  {
+    title: "Stanford Biodesign Innovation Fellowship — 2027–28 cohort",
+    funder: "Stanford Mussallem Center for Biodesign",
+    url: "https://med.stanford.edu/biodesign/programs/fellowships/innovation-fellowships.html",
+    description: "10-month immersive fellowship at Stanford for clinicians, engineers, and businesspeople to identify unmet medical needs and invent/launch medtech solutions. Stipend included. Highly competitive (~12 fellows/cohort).",
+    tags: ["fellowship", "medical", "digital health", "career", "startup"],
+    award: null,
+    kind: "call",
+    deadline: "2026-08-27",
+    deadlineNote: "Applications open June 8, 2026; close August 27, 2026. Interviews Nov 12–13, 2026. Cohort runs Aug 2027 – Jun 2028."
+  },
+
+  // ---------- Entrepreneur fellowships ----------
+  {
+    title: "Thiel Fellowship",
+    funder: "Thiel Foundation",
+    url: "https://thielfellowship.org/",
+    description: "$200K over 2 years for founders under 23 to skip/leave college and build a company. Open to any vertical, including health and AI.",
+    tags: ["startup", "fellowship", "career", "ai"],
+    award: 200000,
+    deadline: "annual",
+    deadlineNote: "One annual cycle (apps typically open winter, close late spring)."
+  },
+  {
+    title: "Halcyon Incubator Fellowship",
+    funder: "Halcyon",
+    url: "https://halcyonhouse.org/incubator/",
+    description: "5-month residency in DC for early-stage social entrepreneurs (health-equity ventures encouraged). Includes housing, stipend, mentorship.",
+    tags: ["fellowship", "incubator", "startup", "healthcare"],
+    award: 10000,
+    deadline: "annual",
+    deadlineNote: "Two cohorts per year; applications open ~3 months before each."
+  },
+  {
+    title: "Emergent Ventures",
+    funder: "Mercatus Center (George Mason University)",
+    url: "https://www.mercatus.org/emergent-ventures",
+    description: "Fast-turnaround grants and fellowships for high-impact founders, scientists, and writers. Strong AI and biomedical track record.",
+    tags: ["fellowship", "ai", "research", "startup"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Rolling — decisions often within weeks. Award size highly variable ($10K–$200K+)."
+  },
+  {
+    title: "Open Philanthropy Century Fellowship",
+    funder: "Open Philanthropy",
+    url: "https://www.openphilanthropy.org/century-fellowship/",
+    description: "Was a 2-year program giving ~$100K/yr to early-career people working on the long-term future (AI safety, biosecurity, global health).",
+    tags: ["fellowship", "ai", "research", "global health", "career"],
+    award: 200000,
+    deadline: "inactive",
+    deadlineNote: "Discontinued — applications closed September 14, 2023. (Open Philanthropy was renamed Coefficient Giving in November 2025; the parent org is still active and runs other programs.)"
+  },
+  {
+    title: "Roddenberry Fellowship",
+    funder: "Roddenberry Foundation",
+    url: "https://apply.roddenberryfoundation.org/app/fellowship",
+    description: "$50K + 12-month support for activists/entrepreneurs advancing civil rights, environmental, and health-equity causes.",
+    tags: ["fellowship", "healthcare", "career"],
+    award: 50000,
+    deadline: "annual",
+    deadlineNote: "One annual cycle (applications typically open in fall)."
+  },
+  {
+    title: "Z Fellows",
+    funder: "Z Fellows (Cory Levy)",
+    url: "https://www.zfellows.com/",
+    description: "$10K + 1-week intensive in SF for top young technical founders. Strong network of YC and unicorn alumni.",
+    tags: ["fellowship", "startup", "career", "ai"],
+    award: 10000,
+    deadline: "rolling",
+    deadlineNote: "Quarterly cohorts; rolling applications."
+  },
+  {
+    title: "1517 Fund / Medici Project",
+    funder: "1517 Fund",
+    url: "https://www.1517fund.com/",
+    description: "Pre-seed checks (~$50K–$500K) for young founders skipping or leaving college. Health and AI portfolio companies.",
+    tags: ["fellowship", "startup", "ai"],
+    award: 500000,
+    deadline: "rolling",
+    deadlineNote: "Rolling intake."
+  },
+  {
+    title: "Pioneer.app",
+    funder: "Pioneer",
+    url: "https://pioneer.app/",
+    description: "Was an online accelerator for ambitious outsiders. Funded 150+ companies with 300+ founders in 50+ countries before pausing new investments.",
+    tags: ["accelerator", "startup", "ai"],
+    award: 100000,
+    deadline: "inactive",
+    deadlineNote: "Pioneer stopped making new investments in 2024."
+  },
+  {
+    title: "Unreasonable Fellowship",
+    funder: "Unreasonable Group",
+    url: "https://unreasonablegroup.com/",
+    description: "Growth-stage accelerator and lifetime fellowship for entrepreneurs solving global challenges including health.",
+    tags: ["fellowship", "accelerator", "healthcare", "global health"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Various programs run throughout the year — check current open calls."
+  },
+  {
+    title: "Ashoka Fellowship",
+    funder: "Ashoka",
+    url: "https://www.ashoka.org/en-us/program/ashoka-fellowship",
+    description: "Lifetime fellowship + multi-year living stipend for leading social entrepreneurs (health-equity ventures eligible).",
+    tags: ["fellowship", "healthcare", "global health", "career"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Nominations and applications accepted continuously by region."
+  },
+
+  // ---------- Health-focused incubators & accelerators ----------
+  {
+    title: "Stanford Biodesign Faculty Fellowship",
+    funder: "Stanford Mussallem Center for Biodesign",
+    url: "https://med.stanford.edu/biodesign/programs/fellowships/faculty-fellowship.html",
+    description: "9-month part-time program for Stanford faculty across medicine, engineering, and other schools to gain advanced training in needs-finding, invention, and translation of health technology.",
+    tags: ["fellowship", "medical", "career"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Annual cycle — applications for 2026-27 are open; check site for current deadline. Eligibility limited to Stanford faculty."
+  },
+  {
+    title: "TMC Biodesign Fellowship",
+    funder: "Texas Medical Center Innovation",
+    url: "https://www.tmc.edu/innovation/",
+    description: "1-year Houston-based fellowship for engineers, clinicians, businesspeople, and designers to develop digital health solutions and medical devices, with immersive shadowing across TMC member institutions.",
+    tags: ["fellowship", "medical", "digital health", "startup", "career"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Annual cycle — verify current application window with TMC Innovation directly."
+  },
+  {
+    title: "TMC Innovation — HealthTech Accelerator (TMCx)",
+    funder: "Texas Medical Center Innovation",
+    url: "https://www.tmc.edu/innovation/",
+    description: "Houston-based accelerator cohorts for digital-health and medtech startups, with pilot access across TMC's member hospitals and research institutions. Includes the cancer-focused ACMD track.",
+    tags: ["accelerator", "digital health", "healthcare", "medical", "startup"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Multiple cohort-specific calls per year (HealthTech, ACMD for cancer devices). Check current open calls on the site."
+  },
+  {
+    title: "J&J Innovation — JLABS QuickFire Challenges",
+    funder: "Johnson & Johnson Innovation",
+    url: "https://jnjinnovation.com/innovation-challenges",
+    description: "Themed challenge calls awarding cash grants (typically $100K–$500K), JLABS residency, and J&J mentorship — no equity. Themes rotate (oncology, GI, cardiovascular, healthy aging, AI, etc.).",
+    tags: ["prize", "incubator", "medical", "healthcare", "digital health", "ai", "startup", "global"],
+    award: 500000,
+    deadline: "inactive",
+    deadlineNote: "No challenges currently open as of May 2026. J&J runs themed challenges periodically — bookmark and check back."
+  },
+
+
+  {
+    title: "MATTER",
+    funder: "MATTER (Chicago)",
+    url: "https://matter.health/",
+    description: "Chicago-based healthcare incubator with corporate partners, pilot opportunities, and specialized accelerators (Health Equity Innovation, Paratus — the BARDA Accelerator Network Hub for Digital Health). 200+ portfolio companies.",
+    tags: ["incubator", "accelerator", "healthcare", "digital health", "startup"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Multiple cohort-based and rolling programs — see specific call entries below for current open accelerators."
+  },
+  {
+    title: "MATTER × CareQuest — 2026 SMILE Health Accelerator",
+    funder: "MATTER + CareQuest Innovation Partners",
+    url: "https://matter.health/",
+    description: "Fifth-year accelerator for innovators improving accessibility, equity, and the integration between oral health and overall health. Curated investor/customer connections, value-proposition support, and emphasis on diverse founders.",
+    tags: ["accelerator", "healthcare", "digital health", "startup"],
+    award: null,
+    kind: "call",
+    deadline: "2026-05-13",
+    deadlineNote: "Submissions close May 13, 2026 at 11:59pm."
+  },
+  {
+    title: "MATTER — 2026 ACCELERATE",
+    funder: "MATTER (Chicago)",
+    url: "https://matter.health/",
+    description: "Up to $100K non-dilutive funding for established, in-market startups with proven traction — plus advisory expertise and analytics support to drive measurable outcomes and position for sustainable growth. For the first time in 2026, open to any startup with mission alignment (not just MATTER members).",
+    tags: ["accelerator", "healthcare", "digital health", "startup"],
+    award: 100000,
+    kind: "call",
+    deadline: "2026-12-31",
+    deadlineNote: "Submissions close December 31, 2026 at 11:59pm. For 2026 the program is open to any startup with mission alignment and proven market traction."
+  },
+  {
+    title: "Health Wildcatters",
+    funder: "Health Wildcatters (Dallas)",
+    url: "https://www.healthwildcatters.com/accelerator",
+    description: "Mentor-driven 12-week hybrid healthcare accelerator (Sep–Nov in Dallas), 8–12 startups per cohort. Cash investment + ~$200K in-kind perks. 200+ mentor network across healthcare.",
+    tags: ["accelerator", "healthcare", "digital health", "startup"],
+    award: 30000,
+    deadline: "annual",
+    deadlineNote: "Annual cohort runs Sep–Nov; applications typically due spring (2026 cycle deadlines have passed). Apply early — diligence cycles fill up."
+  },
+  {
+    title: "gBETA Medtech",
+    funder: "gener8tor",
+    url: "https://www.gener8tor.com/gbeta/medtech",
+    description: "Free 7-week, no-equity accelerator with concierge coaching and a national network of mentors, customers, corporate partners, and investors. 5 medtech startups per cohort.",
+    tags: ["accelerator", "medical", "digital health", "startup"],
+    award: null,
+    deadline: "inactive",
+    deadlineNote: "No cohort currently open. gener8tor runs gBETA Medtech cohorts periodically across U.S. cities — bookmark and check back."
+  },
+  {
+    title: "Bayer G4A — Partnerships Program",
+    funder: "Bayer",
+    url: "https://g4a.health/",
+    description: "Bayer's digital health partnerships program. Growth Track offers ~€100K + Bayer mentorship and access to a global healthcare network. Focus areas: cardiology, women's health, ophthalmology, oncology.",
+    tags: ["accelerator", "digital health", "healthcare", "startup", "global"],
+    award: 100000,
+    deadline: "annual",
+    deadlineNote: "Annual application cycle plus regional editions (e.g. Türkiye). Check g4a.health for current open calls."
+  },
+  {
+    title: "Springboard Enterprises — Women's Health Accelerator",
+    funder: "Springboard Enterprises",
+    url: "https://sb.co/programs/womens-health-accelerator-program/",
+    description: "Accelerator for late-seed/Series A-B women-led companies whose product directly enhances women's health (reproductive, fertility, maternal, diagnostics, therapeutics, medtech). Includes mentorship, partnerships, and growth-capital introductions.",
+    tags: ["accelerator", "healthcare", "digital health", "medical", "startup"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "2026 cohort announced March 2026 — next intake typically opens late 2026/early 2027."
+  },
+  {
+    title: "The Engine (built by MIT)",
+    funder: "The Engine",
+    url: "https://engine.xyz/",
+    description: "Cambridge MA-based nonprofit incubator/accelerator for Tough Tech startups (biotech, climate, deep-tech). 220,000 sq ft of fully-managed wet lab/engineering space. Engine Ventures invests separately.",
+    tags: ["incubator", "medical", "ai", "startup"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Rolling applications for residency and Engine Accelerator programs — check engine.xyz."
+  },
+  {
+    title: "MedTech Innovator",
+    funder: "MedTech Innovator",
+    url: "https://medtechinnovator.org/apply/",
+    description: "World's largest medtech accelerator for seed–Series C medical device, diagnostic, and digital-health companies. Cohort selects ~50+ for showcase; finalists compete for $350K Grand Prize and up to $500K total in non-dilutive awards.",
+    tags: ["accelerator", "prize", "medical", "digital health", "startup"],
+    award: 500000,
+    deadline: "annual",
+    deadlineNote: "Annual cycle — applications close December for the following year (2026 cycle closed Dec 1, 2025). Next cycle opens fall 2026."
+  },
+  {
+    title: "MassChallenge HealthTech",
+    funder: "MassChallenge",
+    url: "https://masschallenge.org/programs/healthtech",
+    description: "Equity-free 4-month accelerator pairing digital-health startups with hospitals, payers, and life-sciences partners.",
+    tags: ["accelerator", "digital health", "healthcare", "startup"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "One annual cohort; applications typically open winter, close spring."
+  },
+  {
+    title: "Mayo Clinic Platform_Accelerate",
+    funder: "Mayo Clinic",
+    url: "https://www.mayoclinicplatform.org/accelerate/",
+    description: "20-week accelerator for AI/digital-health startups with access to Mayo's de-identified clinical data and clinical experts. Equity-light.",
+    tags: ["accelerator", "digital health", "ai", "healthcare", "startup"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Two cohorts per year; check site for current application window."
+  },
+  {
+    title: "Cedars-Sinai Accelerator+",
+    funder: "Cedars-Sinai",
+    url: "https://csaccelerator.com/",
+    description: "12-month healthtech program for Seed+ and Late Seed healthcare companies advancing toward commercialization. Capital investment (amount not publicly disclosed), real-world validation across a national network of academic medical centers, dedicated support teams, office space near Cedars-Sinai Medical Center, curated FDA/EMR/billing sessions. 91 companies across 10 classes.",
+    tags: ["accelerator", "digital health", "healthcare", "startup"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Annual cohort; check site for current application window. Previously a 3-month program with $100K — rebranded and restructured as Accelerator+ with a 12-month format."
+  },
+  {
+    title: "KidsX Accelerator",
+    funder: "KidsX (Children's Hospital LA + consortium)",
+    url: "https://kidsx.health/kidsx-accelerator-2025/",
+    description: "Equity-free virtual accelerator for pediatric digital-health startups with pilot access to a global network of children's hospitals.",
+    tags: ["accelerator", "digital health", "healthcare", "startup"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Annual cohort; applications open spring."
+  },
+  {
+    title: "Johnson & Johnson Innovation — JLABS",
+    funder: "Johnson & Johnson",
+    url: "https://jnjinnovation.com/jlabs",
+    description: "No-strings-attached life-science/health-tech incubator network — entrepreneurs keep full IP and equity. 1,000+ portfolio companies across North America, APAC, and EMEA. Note: footprint has been contracting (NYC site transitioning to NYGC; JLABS @ TMC Houston vacating Jan 2026; EMEA is now virtual).",
+    tags: ["incubator", "healthcare", "medical", "digital health", "startup"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Rolling resident applications at active sites (e.g. San Diego, South SF, Boston BIDMC, Shanghai, plus EMEA virtual). Verify current site list before applying."
+  },
+  {
+    title: "Plug and Play Health",
+    funder: "Plug and Play Tech Center",
+    url: "https://www.plugandplaytechcenter.com/industries/health",
+    description: "3-month hybrid corporate accelerator connecting digital-health startups with 30+ partners (Cleveland Clinic, J&J, Sanofi, Roche, etc.). No equity required to join program. Optional investment $50K–$250K for 1–5% equity, with follow-on potential up to $1M. Strong fit for B2B digital health, health IT, and diagnostics.",
+    tags: ["accelerator", "digital health", "healthcare", "startup"],
+    award: 250000,
+    deadline: "rolling",
+    deadlineNote: "Multiple cohorts per year. 5th Medtech cohort selected April 2026; Plug and Play UK Health also actively running."
+  },
+  {
+    title: "Dreamit HealthTech",
+    funder: "Dreamit Ventures",
+    url: "https://www.dreamit.com/healthtech",
+    description: "Was a 14-week post-revenue accelerator for digital-health startups focused on customer acquisition and follow-on funding. Dreamit has since shifted to a venture fund model — the HealthTech accelerator does not appear to be actively running cohorts.",
+    tags: ["accelerator", "digital health", "startup"],
+    award: null,
+    deadline: "inactive",
+    deadlineNote: "No active accelerator cohorts as of May 2026. Dreamit now operates as a Healthtech Fund — bookmark and verify if cohort programming resumes."
+  },
+  {
+    title: "StartUp Health",
+    funder: "StartUp Health",
+    url: "https://www.startuphealth.com/membership",
+    description: "Long-term 'Health Transformer' community supporting health-moonshot founders globally. Now operates as a paid membership network (multiple tiers; some by invitation/application) rather than a traditional cohort accelerator — verify pricing and fit before committing.",
+    tags: ["accelerator", "incubator", "healthcare", "digital health", "startup", "global health"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Paid membership model with multiple tiers. Two primary plans are by invitation through application + interview. Not a free / equity-only accelerator."
+  },
+  {
+    title: "Techstars (Health verticals)",
+    funder: "Techstars",
+    url: "https://www.techstars.com/accelerators",
+    description: "13-week mentorship-driven accelerator with $120K in funding (typically $20K + $100K convertible) for ~6% equity. Multiple health-themed cohorts run yearly.",
+    tags: ["accelerator", "healthcare", "digital health", "ai", "startup"],
+    award: 120000,
+    deadline: "rolling",
+    deadlineNote: "Different cohorts have different deadlines — check the accelerators page."
+  },
+
+  // ---------- Prize challenges ----------
+  {
+    title: "MIT Solve — Global Challenges",
+    funder: "MIT Solve",
+    url: "https://solve.mit.edu/challenges",
+    description: "Annual challenges (often Health Security & Pandemics, Maternal & Newborn Health, AI for Humanity) awarding ~$10K–$100K prizes plus a community of partners.",
+    tags: ["prize", "healthcare", "digital health", "ai", "global health", "startup"],
+    award: 100000,
+    deadline: "annual",
+    deadlineNote: "Annual challenge cycle; submissions typically open spring, close summer."
+  },
+
+  // ---------- Existing fellowships / accelerators ----------
+  {
+    title: "Activate Fellowship",
+    funder: "Activate.org",
+    url: "https://activate.org/the-fellowship",
+    description: "Two-year fellowship for scientists/engineers commercializing hard-tech, including health and biotech. Living stipend + ~$100K project funding + sponsor support.",
+    tags: ["startup", "career", "medical", "ai"],
+    award: 100000,
+    deadline: "annual",
+    deadlineNote: "One annual application cycle (typically opens fall, closes winter)."
+  },
+  {
+    title: "Echoing Green Fellowship",
+    funder: "Echoing Green",
+    url: "https://echoinggreen.org/fellowship/",
+    description: "Stipend + leadership development for early-stage social entrepreneurs, including health-equity ventures.",
+    tags: ["healthcare", "startup", "career"],
+    award: 80000,
+    deadline: "annual",
+    deadlineNote: "One annual cycle (applications typically open in fall)."
+  },
+  {
+    title: "Y Combinator (Healthcare / AI tracks)",
+    funder: "Y Combinator",
+    url: "https://www.ycombinator.com/apply",
+    description: "Not a grant — equity-based seed program ($500K standard deal). Strong cohort presence for healthcare and AI startups.",
+    tags: ["accelerator", "startup", "healthcare", "digital health", "ai"],
+    award: 500000,
+    deadline: "annual",
+    deadlineNote: "Two batches per year (Winter and Summer); deadlines are quarterly-ish."
+  },
+
+  // ---------- Cloud / compute credit programs (non-cash but useful) ----------
+  {
+    title: "Microsoft AI for Health",
+    funder: "Microsoft",
+    url: "https://www.microsoft.com/en-us/ai/ai-for-health",
+    description: "Rolling philanthropic program awarding Azure cloud credits and AI for Good Lab collaboration to nonprofits, academic institutions, and researchers tackling global health challenges. Distinct from Microsoft AI for Good Open Call (regional, $5M Azure credits, specific deadlines) and partnership grants like the OCRA Collaborative Research Development Grant (up to $900K + Azure).",
+    tags: ["healthcare", "digital health", "ai", "research"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Applications evaluated on an ongoing basis."
+  },
+  {
+    title: "Google for Startups — AI / Health Accelerators",
+    funder: "Google",
+    url: "https://startup.google.com/programs/accelerator/",
+    description: "Equity-free 10–12 week accelerator with mentorship and Google Cloud credits; AI-first and vertical health cohorts run periodically.",
+    tags: ["startup", "ai", "digital health"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Cohorts open 1–2 times/year per region/vertical."
+  },
+  {
+    title: "AWS Healthcare Accelerator",
+    funder: "Amazon Web Services",
+    url: "https://healthcare.awsaccelerators.com/",
+    description: "AWS credits and technical support for healthcare and life-sciences startups. Specific accelerator cohorts (workforce, public sector, UK) run with partners; AWS Activate credits separately available to all eligible startups.",
+    tags: ["credits", "accelerator", "startup", "healthcare", "digital health", "ai"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Activate credits available continuously; accelerator cohorts open seasonally."
+  },
+  {
+    title: "NVIDIA Inception",
+    funder: "NVIDIA",
+    url: "https://www.nvidia.com/en-us/startups/",
+    description: "Free program for AI/ML startups: GPU cloud credits, hardware discounts, technical training, go-to-market support, and access to NVIDIA's investor network. No equity, no fees.",
+    tags: ["credits", "ai", "digital health", "startup"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Continuous applications; tiered benefits as the company grows."
+  },
+  {
+    title: "Anthropic for Startups",
+    funder: "Anthropic",
+    url: "https://www.anthropic.com/startups",
+    description: "API credits and engineering support for early-stage startups building on Claude. Health and clinical-AI startups eligible.",
+    tags: ["credits", "ai", "digital health", "startup"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Rolling intake via partner VCs and direct application."
+  },
+
+  // ---------- HRSA / CDC / state ----------
+  {
+    title: "HRSA Funding Opportunities",
+    funder: "Health Resources & Services Administration",
+    url: "https://www.hrsa.gov/grants/find-funding",
+    description: "Federal funding for primary care, rural health, maternal/child health, telehealth, and workforce programs.",
+    tags: ["healthcare", "digital health", "policy"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "NOFOs released throughout the year — search by program."
+  },
+  {
+    title: "CDC Grants & Cooperative Agreements",
+    funder: "Centers for Disease Control & Prevention",
+    url: "https://www.cdc.gov/grants/",
+    description: "Public-health-focused grants spanning surveillance, prevention, infectious disease, and informatics.",
+    tags: ["healthcare", "digital health", "policy"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "NOFOs released continuously on Grants.gov."
+  },
+  {
+    title: "Grants.gov — Health-related search",
+    funder: "U.S. Federal Government",
+    url: "https://www.grants.gov/search-grants?cfdaCategory=HL",
+    description: "Master federal opportunities feed. Filter category to Health (HL) for medical/public-health funding across agencies.",
+    tags: ["healthcare", "medical", "research", "policy"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Hundreds of opportunities at any time; set up email alerts."
+  },
+
+  // ========== INTERNATIONAL ==========
+  // Note: most international funders restrict eligibility to citizens, residents,
+  // or institutions in their country/region. Always check eligibility on the source page.
+
+  // ---------- United Kingdom ----------
+  {
+    title: "Wellcome Trust — Funding Schemes",
+    funder: "Wellcome Trust (UK)",
+    url: "https://wellcome.org/grant-funding/schemes",
+    description: "Major UK biomedical funder. Discovery Awards (up to £3.5M / 8 yrs for established researchers), Career Development Awards, Early-Career Awards, and global-health schemes. Open globally for many schemes.",
+    tags: ["medical", "research", "uk"],
+    award: 3500000,
+    deadline: "rolling",
+    deadlineNote: "Multiple schemes with their own deadlines — check the schemes page."
+  },
+  {
+    title: "UKRI — Medical Research Council (MRC)",
+    funder: "UK Research and Innovation",
+    url: "https://www.ukri.org/councils/mrc/",
+    description: "UK's primary biomedical research funder: programme grants, project grants, fellowships, translational and industrial-partnership schemes.",
+    tags: ["medical", "research", "uk"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Many schemes with rolling or annual cycles."
+  },
+  {
+    title: "Innovate UK — Biomedical Catalyst",
+    funder: "Innovate UK / UKRI",
+    url: "https://www.ukri.org/councils/innovate-uk/",
+    description: "Grants for UK SMEs developing innovative health and life-sciences products — typically £1–4M for industry-led R&D.",
+    tags: ["medical", "digital health", "startup", "uk"],
+    award: 4000000,
+    deadline: "annual",
+    deadlineNote: "Multiple rounds per year — check current open competitions."
+  },
+  {
+    title: "NIHR — Funding Opportunities",
+    funder: "National Institute for Health and Care Research (UK)",
+    url: "https://www.nihr.ac.uk/funding",
+    description: "UK's largest funder of applied health and care research: programme grants, fellowships, public-health research, AI-in-health calls.",
+    tags: ["healthcare", "digital health", "ai", "research", "uk"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Programme- and scheme-specific deadlines throughout the year."
+  },
+  {
+    title: "Cancer Research UK — Grants",
+    funder: "Cancer Research UK",
+    url: "https://www.cancerresearchuk.org/funding-for-researchers/our-funding-schemes",
+    description: "World's largest cancer charity funder: project, programme, fellowship, biomarker, and innovation awards.",
+    tags: ["medical", "research", "uk"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Scheme-specific deadlines."
+  },
+  {
+    title: "KQ Labs — Cohort 8",
+    funder: "Francis Crick Institute (UK)",
+    url: "https://www.crick.ac.uk/research/applying-our-research/entrepreneurship/kq-labs",
+    description: "5-month London-based accelerator for up to ~10 UK-based early-stage startups working at the intersection of biomedical research and data science (drug discovery, digital health, precision medicine). Includes a £40K convertible loan, workshops, mentor network, and investor/corporate introductions. Funded by LifeArc; strategic partners include Cancer Research UK and Medicines Discovery Catapult.",
+    tags: ["accelerator", "digital health", "ai", "startup", "uk"],
+    award: 40000,
+    kind: "call",
+    deadline: "2026-08-28",
+    deadlineNote: "Applications close Thursday 28 August 2026 at 5pm. UK-based startups only."
+  },
+  {
+    title: "DigitalHealth.London Accelerator",
+    funder: "DigitalHealth.London",
+    url: "https://digitalhealth.london/accelerator/",
+    description: "12-month programme supporting digital-health SMEs to navigate, validate, and scale within the NHS.",
+    tags: ["accelerator", "digital health", "startup", "uk"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Annual cohort; applications typically open spring."
+  },
+
+  // ---------- European Union ----------
+  {
+    title: "Horizon Europe — Cluster 1: Health",
+    funder: "European Commission",
+    url: "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/cluster-1-health_en",
+    description: "EU's flagship research/innovation programme for health: large collaborative grants across staying healthy, healthcare systems, and infectious disease.",
+    tags: ["medical", "healthcare", "digital health", "research", "eu"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Annual work-programme calls — multiple deadlines per year."
+  },
+  {
+    title: "EIC Accelerator",
+    funder: "European Innovation Council",
+    url: "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+    description: "Up to €2.5M grant + €0.5–15M equity investment for deep-tech SMEs commercializing breakthrough innovation. Health, biotech, and AI eligible.",
+    tags: ["medical", "healthcare", "digital health", "ai", "startup", "eu"],
+    award: 17500000,
+    deadline: "annual",
+    deadlineNote: "2026 has 6 Step 2 cut-offs (5pm Brussels time): Jan 7, Mar 4, May 6, Jul 8, Sep 2, Nov 4. Step 1 short application can be submitted any time."
+  },
+  {
+    title: "European Research Council (ERC) — Starting / Consolidator / Advanced",
+    funder: "European Research Council",
+    url: "https://erc.europa.eu/apply-grant",
+    description: "Frontier research grants (€1.5–3.5M typical) for individual investigators based in Europe, all fields including biomedical and AI.",
+    tags: ["medical", "research", "ai", "career", "eu"],
+    award: 3500000,
+    deadline: "annual",
+    deadlineNote: "Annual calls: Starting (autumn), Consolidator (winter), Advanced (spring)."
+  },
+  {
+    title: "EIT Health — Programmes",
+    funder: "European Institute of Innovation & Technology",
+    url: "https://eithealth.eu/programmes/",
+    description: "Pan-European accelerator and innovation programmes (Catapult, Wild Card, BoostUp!, Headstart) for healthtech startups.",
+    tags: ["accelerator", "digital health", "startup", "eu"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Programme-specific deadlines throughout the year."
+  },
+  {
+    title: "Innovative Health Initiative (IHI)",
+    funder: "EU public-private partnership",
+    url: "https://www.ihi.europa.eu/",
+    description: "Successor to IMI. Large public-private collaborative grants (often €10–50M+) for health innovation across Europe.",
+    tags: ["medical", "healthcare", "digital health", "research", "eu"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Annual call cycle with multi-stage submissions."
+  },
+  {
+    title: "BioInnovation Institute (BII)",
+    funder: "Novo Nordisk Foundation",
+    url: "https://bioinnovationinstitute.com/",
+    description: "Copenhagen-based incubator/accelerator with non-dilutive grants up to ~€2.7M and lab space for life-science startups across the Nordics and Europe.",
+    tags: ["incubator", "accelerator", "medical", "startup", "eu"],
+    award: 2700000,
+    deadline: "annual",
+    deadlineNote: "Multiple programmes (Venture Lab, Creation House) with annual calls. Site under maintenance as of May 2026 — try LinkedIn or direct email if the page is unreachable."
+  },
+
+  // ---------- Canada ----------
+  {
+    title: "Canadian Institutes of Health Research (CIHR)",
+    funder: "CIHR (Canada)",
+    url: "https://cihr-irsc.gc.ca/e/37788.html",
+    description: "Canada's federal health research funder: project, foundation, and team grants across biomedical, clinical, health-systems, and population health.",
+    tags: ["medical", "healthcare", "research", "canada"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Two main project-grant competitions per year (spring/fall)."
+  },
+  {
+    title: "Grand Challenges Canada",
+    funder: "Grand Challenges Canada",
+    url: "https://www.grandchallenges.ca/funding-opportunities/",
+    description: "Funds bold ideas with big impact in global health — Stars in Global Health (~CAD$250K seed) and Transition to Scale grants.",
+    tags: ["medical", "global health", "startup", "canada"],
+    award: 250000,
+    deadline: "inactive",
+    deadlineNote: "No active open calls as of May 2026. Bookmark and check the funding opportunities page for new rounds."
+  },
+
+  // ---------- Australia ----------
+  {
+    title: "NHMRC — National Health and Medical Research Council",
+    funder: "NHMRC (Australia)",
+    url: "https://www.nhmrc.gov.au/funding",
+    description: "Australia's primary medical research funder: Investigator, Ideas, Synergy, and Partnership grants.",
+    tags: ["medical", "research", "australia"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Annual scheme-specific deadlines."
+  },
+
+  // ---------- Asia / Middle East ----------
+  {
+    title: "Japan AMED",
+    funder: "Japan Agency for Medical Research and Development",
+    url: "https://www.amed.go.jp/en/",
+    description: "Japan's primary medical R&D funder, coordinating drug discovery, regenerative medicine, AI/data-driven health, and clinical research grants.",
+    tags: ["medical", "ai", "research", "japan"],
+    award: null,
+    deadline: "annual",
+    deadlineNote: "Annual fiscal-year calls (typically Jan–Mar)."
+  },
+  {
+    title: "Israel Innovation Authority",
+    funder: "Government of Israel",
+    url: "https://innovationisrael.org.il/en/",
+    description: "Non-dilutive grants for Israeli companies (and binational partnerships) developing health, digital-health, and AI technology.",
+    tags: ["medical", "digital health", "ai", "startup", "israel"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Multiple programmes with rolling or scheduled calls."
+  },
+
+  // ---------- Global talent investors & accelerators ----------
+  {
+    title: "Entrepreneur First",
+    funder: "Entrepreneur First",
+    url: "https://www.joinef.com/",
+    description: "Talent investor: 6-month cofounder-matching programme with pre-seed funding. Cohorts in London, Paris, Berlin, Bangalore, Singapore. Health and AI strong.",
+    tags: ["accelerator", "fellowship", "ai", "digital health", "startup", "uk", "eu", "global"],
+    award: null,
+    deadline: "rolling",
+    deadlineNote: "Continuous applications; cohort-specific start dates."
+  },
+  {
+    title: "Antler",
+    funder: "Antler",
+    url: "https://www.antler.co/apply",
+    description: "Global pre-seed talent investor with cohorts in 25+ cities. Cofounder matching, residency, then investment. US standard: $250K SAFE at $2.75M post-money (~9% equity); other geographies typically $100–250K with 7–10% equity, structured as SAFE, convertible note, or equity. Health and AI represented.",
+    tags: ["accelerator", "fellowship", "ai", "digital health", "startup", "global"],
+    award: 250000,
+    deadline: "rolling",
+    deadlineNote: "Continuous applications; rolling cohorts by location. Founders work with Antler in person for ~8 weeks before final investment decision."
+  },
+  {
+    title: "SOSV SF & SOSV NY (formerly IndieBio)",
+    funder: "SOSV",
+    url: "https://sosv.com/apply/indiebio/",
+    description: "Deep-tech / biotech accelerator renamed from IndieBio in 2026. Resourced labs, offices, and event spaces in San Francisco, New York City, and Newark. $525K initial investment. Latest cohorts: SF Batch 14, NY Batch 06 — synthetic biology, drug discovery, diagnostics, digital health, sustainable agriculture.",
+    tags: ["accelerator", "medical", "healthcare", "digital health", "startup", "global"],
+    award: 525000,
+    deadline: "rolling",
+    deadlineNote: "Two cohorts per year per location; rolling applications. The IndieBio brand was retired in 2026 — programs now operate under the SOSV name."
+  },
+  {
+    title: "HAX (SOSV)",
+    funder: "SOSV",
+    url: "https://hax.co/",
+    description: "Hard-tech accelerator with $250K initial check; supports medical-device and health-hardware startups alongside industrial robotics and climate.",
+    tags: ["accelerator", "medical", "startup", "global"],
+    award: 250000,
+    deadline: "rolling",
+    deadlineNote: "Rolling applications."
+  },
+
+  // ---------- Global development funders ----------
+  {
+    title: "Global Innovation Fund",
+    funder: "Global Innovation Fund",
+    url: "https://www.globalinnovation.fund/apply-for-funding",
+    description: "Three-stage social innovation fund: Pilot (up to $230K), Test & Transition (up to $2.3M), and Scale (up to $15M) for innovations benefiting people in low-/middle-income countries. Health is a major theme.",
+    tags: ["medical", "healthcare", "global health", "startup"],
+    award: 15000000,
+    deadline: "inactive",
+    deadlineNote: "Last application window closed 15 January 2025. No new call announced as of May 2026 — bookmark the apply page for future windows."
+  },
+  {
+    title: "DIV — Development Innovation Ventures",
+    funder: "DIV Fund",
+    url: "https://www.div.fund/about",
+    description: "Independent successor to USAID's DIV, led by former USAID Innovation lead Sasha Gallant and Nobel laureate Michael Kremer. Three-tier funding: Pilot (up to $200K), Test (up to $500K), Scale (up to $1.5M) for cost-effective solutions in low-/middle-income countries — sector-agnostic, with health as one focus area.",
+    tags: ["medical", "healthcare", "global health", "startup"],
+    award: 1500000,
+    deadline: "rolling",
+    deadlineNote: "Open to all organization types; rolling applications across the three stages. Verify current intake on the apply page."
+  }
+];
+
+// Bump this whenever you verify or add opportunities. Format: YYYY-MM-DD.
+const LAST_UPDATED = "2026-05-12";
+
+// Region tags. Any entry without one of these gets "us" as the default,
+// so US-based programs don't all need to be tagged manually.
+const REGION_TAGS = new Set(["us", "uk", "eu", "canada", "australia", "japan", "israel", "global"]);
+for (const o of OPPORTUNITIES) {
+  if (!o.tags.some(t => REGION_TAGS.has(t))) o.tags = [...o.tags, "us"];
+}
+
+const ALL_TAGS = [...new Set(OPPORTUNITIES.flatMap(o => o.tags))].sort();
+const today = new Date(); today.setHours(0,0,0,0);
+document.getElementById("lastUpdated").textContent = LAST_UPDATED;
+
+const state = {
+  q: "",
+  tags: new Set(),
+  statusFilter: "active",
+  kindFilter: "all",
+  deadlineFilter: "all",
+  sort: "deadline",
+};
+function kindOf(opp) { return opp.kind || "program"; }
+function isPast(opp) {
+  if (opp.deadline === "rolling" || opp.deadline === "annual") return false;
+  if (opp.deadline === "inactive") return true;
+  return daysUntil(opp) < 0;
+}
+
+function deadlineDate(opp) {
+  if (opp.deadline === "rolling" || opp.deadline === "annual" || opp.deadline === "inactive") return null;
+  return new Date(opp.deadline + "T00:00:00");
+}
+function daysUntil(opp) {
+  if (opp.deadline === "inactive") return -Infinity;
+  const d = deadlineDate(opp);
+  if (!d) return Infinity;
+  return Math.round((d - today) / 86400000);
+}
+function formatDeadline(opp) {
+  if (opp.deadline === "rolling") return { text: "Rolling / always open", cls: "rolling" };
+  if (opp.deadline === "annual") return { text: "Annual cycle", cls: "rolling" };
+  if (opp.deadline === "inactive") return { text: "No active intake", cls: "" };
+  const d = deadlineDate(opp);
+  const days = daysUntil(opp);
+  const dateStr = d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  if (days < 0) return { text: `${dateStr} (passed — next cycle TBD)`, cls: "" };
+  if (days <= 14) return { text: `${dateStr} (${days}d)`, cls: "urgent" };
+  if (days <= 60) return { text: `${dateStr} (${days}d)`, cls: "soon" };
+  return { text: `${dateStr} (${days}d)`, cls: "" };
+}
+function formatAward(a) {
+  if (!a) return "Award varies";
+  if (a >= 1e6) return "Up to $" + (a/1e6).toFixed(a%1e6===0?0:1) + "M";
+  if (a >= 1e3) return "Up to $" + Math.round(a/1e3) + "K";
+  return "$" + a;
+}
+
+function renderTagBar() {
+  const bar = document.getElementById("tagbar");
+  bar.innerHTML = "";
+  for (const t of ALL_TAGS) {
+    const b = document.createElement("button");
+    b.textContent = t;
+    if (state.tags.has(t)) b.classList.add("active");
+    b.onclick = () => {
+      if (state.tags.has(t)) state.tags.delete(t); else state.tags.add(t);
+      b.classList.toggle("active", state.tags.has(t));
+      render();
+    };
+    bar.appendChild(b);
+  }
+}
+
+function matches(opp) {
+  if (state.q) {
+    const q = state.q.toLowerCase();
+    const hay = (opp.title + " " + opp.funder + " " + opp.description + " " + opp.tags.join(" ")).toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+  if (state.tags.size > 0) {
+    for (const t of state.tags) if (!opp.tags.includes(t)) return false;
+  }
+  if (state.kindFilter !== "all" && kindOf(opp) !== state.kindFilter) return false;
+  if (state.statusFilter === "active" && isPast(opp)) return false;
+  if (state.statusFilter === "passed" && !isPast(opp)) return false;
+  if (state.deadlineFilter !== "all") {
+    const days = daysUntil(opp);
+    if (state.deadlineFilter === "rolling") {
+      if (opp.deadline !== "rolling" && opp.deadline !== "annual") return false;
+    } else if (state.deadlineFilter === "next30") {
+      if (days < 0 || days > 30) return false;
+    } else if (state.deadlineFilter === "next90") {
+      if (days < 0 || days > 90) return false;
+    } else if (state.deadlineFilter === "next180") {
+      if (days < 0 || days > 180) return false;
+    }
+  }
+  return true;
+}
+
+function render() {
+  const grid = document.getElementById("grid");
+  const empty = document.getElementById("empty");
+  const summary = document.getElementById("summary");
+  let items = OPPORTUNITIES.filter(matches);
+
+  if (state.sort === "deadline") {
+    items.sort((a,b) => {
+      const da = daysUntil(a), db = daysUntil(b);
+      const aPast = da < 0, bPast = db < 0;
+      if (aPast !== bPast) return aPast ? 1 : -1;
+      return da - db;
+    });
+  } else if (state.sort === "award") {
+    items.sort((a,b) => (b.award || 0) - (a.award || 0));
+  } else if (state.sort === "title") {
+    items.sort((a,b) => a.title.localeCompare(b.title));
+  }
+
+  grid.innerHTML = "";
+  empty.style.display = items.length ? "none" : "block";
+  summary.textContent = `${items.length} of ${OPPORTUNITIES.length} opportunities`;
+
+  const defaults = { q: "", statusFilter: "active", kindFilter: "all", deadlineFilter: "all" };
+  const qInput = document.getElementById("q");
+  qInput.classList.toggle("active-filter", state.q !== defaults.q);
+  for (const k of ["statusFilter", "kindFilter", "deadlineFilter"]) {
+    document.getElementById(k).classList.toggle("active-filter", state[k] !== defaults[k]);
+  }
+  const anyActive = state.q !== defaults.q
+    || state.statusFilter !== defaults.statusFilter
+    || state.kindFilter !== defaults.kindFilter
+    || state.deadlineFilter !== defaults.deadlineFilter
+    || state.tags.size > 0;
+  document.getElementById("clearFilters").hidden = !anyActive;
+
+  for (const opp of items) {
+    const card = document.createElement("div");
+    card.className = "card" + (isPast(opp) ? " past" : "");
+    const dl = formatDeadline(opp);
+    const kind = kindOf(opp);
+    const kindLabel = kind === "call" ? "Specific call" : "Standing program";
+    card.innerHTML = `
+      <div class="card-head">
+        <h3>${escape(opp.title)}</h3>
+        <span class="badge ${kind}">${kindLabel}</span>
+      </div>
+      <div class="funder">${escape(opp.funder)}</div>
+      <div class="desc">${escape(opp.description)}</div>
+      <div class="meta">
+        <span class="pill deadline ${dl.cls}">📅 ${escape(dl.text)}</span>
+        <span class="pill">💰 ${escape(formatAward(opp.award))}</span>
+      </div>
+      <div class="meta">${opp.tags.map(t => `<span class="tag">${escape(t)}</span>`).join("")}</div>
+      ${opp.deadlineNote ? `<div class="funder">${escape(opp.deadlineNote)}</div>` : ""}
+      <a class="cta" href="${encodeURI(opp.url)}" target="_blank" rel="noopener noreferrer">Open funder page →</a>
+    `;
+    grid.appendChild(card);
+  }
+}
+
+function escape(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
+}
+
+document.getElementById("q").addEventListener("input", e => { state.q = e.target.value; render(); });
+const aboutModal = document.getElementById("aboutModal");
+document.getElementById("aboutBtn").addEventListener("click", () => aboutModal.showModal());
+document.getElementById("aboutLinkFooter").addEventListener("click", e => { e.preventDefault(); aboutModal.showModal(); });
+aboutModal.addEventListener("click", e => { if (e.target === aboutModal) aboutModal.close(); });
+document.getElementById("clearFilters").addEventListener("click", () => {
+  state.q = "";
+  state.statusFilter = "active";
+  state.kindFilter = "all";
+  state.deadlineFilter = "all";
+  state.tags = new Set();
+  document.getElementById("q").value = "";
+  document.getElementById("statusFilter").value = "active";
+  document.getElementById("kindFilter").value = "all";
+  document.getElementById("deadlineFilter").value = "all";
+  renderTagBar();
+  render();
+});
+document.getElementById("statusFilter").addEventListener("change", e => { state.statusFilter = e.target.value; render(); });
+document.getElementById("kindFilter").addEventListener("change", e => { state.kindFilter = e.target.value; render(); });
+document.getElementById("deadlineFilter").addEventListener("change", e => { state.deadlineFilter = e.target.value; render(); });
+document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
+
+renderTagBar();
+render();
+</script>
+</body>
+</html>
